@@ -1,6 +1,7 @@
 # ecommerce_app
 
 A new Flutter project.
+Flutter version : 3.10.0
 
 ## Getting Started
 
