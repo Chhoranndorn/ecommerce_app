@@ -1,7 +1,7 @@
-import 'package:ecommerce_app/views/test.dart';
+import 'package:ecommerce_app/screen/splash/favorite/favorite_screen.dart';
+import 'package:ecommerce_app/screen/splash/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'app_home_screen.dart';
+import '../../views/home_screen.dart';
 
 class AppMainScreen extends StatefulWidget {
   const AppMainScreen({super.key});
@@ -14,9 +14,9 @@ class _AppMainScreenState extends State<AppMainScreen> {
   int selectedIndex = 0;
   final List<Widget> pages = [
     const AppHomeScreen(),
+    const TechFavCard(),
     const Scaffold(),
-    const Scaffold(),
-    const Scaffold(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,9 +36,10 @@ class _AppMainScreenState extends State<AppMainScreen> {
           backgroundColor: Colors.white,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications), label: "Notification"),
+                icon: Icon(Icons.favorite), label: "Favorite"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.badge), label: "My Orders"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_2_outlined), label: "Profile"),
           ]),
